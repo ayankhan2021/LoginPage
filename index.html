@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="login_wrapper active">
+                <form action method="post">
+                    <h1 style="text-align:center;">Login</h1>
+                    <div class="inputbox">
+                        <div class="emailbox"><input type="email"
+                                placeholder="Enter your email" name="email" class="email"
+                                id="email" required>
+                                <i class='bx bxs-envelope'></i></div>
+                        <div class="passwordbox">
+                            <input type="password"
+                                placeholder="Enter your password" class="password"
+                                name="password" id="password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="passwordbox">
+                            <input type="password"
+                                placeholder="Confirm your password" class="password"
+                                name="password" id="password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="logbtn" style="margin-top:20px">Login</button>
+                </form>
+                <div class="switch">
+                    <p style="margin-top:10px">Don't have an account?</p>
+                    <button class="sec_btn">Signup</button>
+                </div>
+            </div>
+            <div class="signup_wrapper nonactive">
+                <form action method="post">
+                    <h1 style="text-align:center;">Signup</h1>
+                    <div class="inputbox">
+                        <div class="names">
+                            <input type="text" class="fname" placeholder="First Name"><i class='bx bx-user'></i>
+                            <input type="text" class="lname" placeholder="Last Name"><i class='bx bx-user'></i>
+                        </div>
+                        <div class="emailbox">
+                            <input type="email" class="email" placeholder="Enter your email"
+                                name="email" id="email" required>
+                                <i class='bx bxs-envelope'></i>
+                        </div>
+                        <div class="passwordbox">
+                            <input type="password" class="password"
+                                placeholder="Enter your password"
+                                name="password" id="password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <button type="submit" class="signbtn">Signup</button>
+                    </div>
+                </form>
+                <div class="switch">
+                    <p style="margin-top:10px">Already have an
+                        account?</p>
+                    <button class="sec_btn1">Login</button>
+                </div>
+            </div>
+        </body>
+        <script src="scripts.js"></script>
+    </html>
