@@ -24,6 +24,12 @@
     position: relative;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    
+}
 
 form{
     width: 400px;

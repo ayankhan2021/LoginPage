@@ -1,3 +1,6 @@
+const hardcodedEmail = "ayan@gmail.com";
+const hardcodedPassword = "1234";
+
 document.addEventListener("DOMContentLoaded", function() {
     const loginWrapper = document.querySelector('.login_wrapper');
     const signupWrapper = document.querySelector('.signup_wrapper');
@@ -25,13 +28,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     signbtn.addEventListener('click', function(e){
-        e.preventDefault();
 
+        e.preventDefault();    
         // Get the values from the inputs
         const firstName = document.querySelector('.fname').value;
         const lastName = document.querySelector('.lname').value;
         const email = document.querySelector('.email').value;
         const password = document.querySelector('.password').value;
+        signupWrapper.classList.remove('active');
+        signupWrapper.classList.add('nonactive');
+        loginWrapper.classList.remove('nonactive');
+        loginWrapper.classList.add('active');
 
         // Create an object with the values
         const formData = {
@@ -42,16 +49,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Convert the object to JSON format and log it to the console
         console.log(JSON.stringify(formData));
-        alert("Signup Successful")
         
     });
 
     logbtn.addEventListener('click', function(e){
-        e.preventDefault();
+
+        e.preventDefault();     
 
         // Get the values from the inputs
         const email = document.querySelector('.email').value;
         const password = document.querySelector('.password').value;
+
+        if (email === hardcodedEmail && password === hardcodedPassword) {
+            alert('Login successful!');
+            // Redirect to home page
+            window.location.href = "home.html";
+        } else {
+            alert('Invalid email or password!');
+        }
 
         // Create an object with the values
         const formData = {
